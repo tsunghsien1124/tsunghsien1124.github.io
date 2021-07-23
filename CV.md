@@ -6,6 +6,9 @@ permalink: /CV/
 
 Download CV here
 
-Education
+### Education
+Ph.D., University of Mannheim
+Master, National Taiwan University
+Bachelor, National Taiwan University
 
-Professional Experience
+### Professional Experience
