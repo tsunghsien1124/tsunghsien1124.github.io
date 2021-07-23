@@ -1,17 +1,17 @@
-title: Your awesome title
+title: Tsung-Hsien Li
 author:
-  name: GitHub User
-  email: your-email@domain.com
+  name: Tsung-Hsien Li
+  email: tsung-hsien.li@gess.uni-mannheim.de
 description: > # this means to ignore newlines until "show_excerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Tsung-Hsien Li's website for research about macroeconomics, especially consumer finance.
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
+  skin: dark
+
   date_format: "%b %-d, %Y"
 
   # generate social links in footer
