@@ -4,10 +4,6 @@ title: Research
 permalink: /Research/
 ---
 
-Download my research statement here!
-
----
-
 #### Job market paper
 
 Are Payday Loan Users Irrational? A Credit-Scoring Approach (with Jan Sun)
