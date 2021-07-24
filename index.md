@@ -8,4 +8,10 @@
 layout: default
 ---
 
-<div style="text-align: justify"> Hello! Welcome to my personal website. My name is Tsung-Hsien Li. I'm a Ph.D. candidate in Economics at the University of Mannheim. My research interests lie in mainly Macroeconomics, especially Consumer Finance and Computational Economics. </div>
+<div style="text-align: justify">
+I'm a Ph.D. candidate in Economics at the University of Mannheim. My research interests include Consumer Finance and Computational Economics.
+
+Download my Job Market Paper and CV.
+
+
+</div>

@@ -10,7 +10,7 @@ Download CV here!
 
 #### Education
 
-Ph.D., University of Mannheim
+Sep. 2017 -Present, Ph.D., University of Mannheim
 
 Master, National Taiwan University
 
@@ -20,4 +20,4 @@ Master, National Taiwan University
 
 #### Professional Experience
 
-Economic and Finance Specialist, Central Bank of R.O.C. (Taiwan)
+2015/ 2017 Economic and Finance Specialist, Central Bank of R.O.C. (Taiwan)
