@@ -6,6 +6,8 @@ permalink: /CV/
 
 Download CV here!
 
+---
+
 #### Education
 
 Ph.D., University of Mannheim
@@ -13,6 +15,8 @@ Ph.D., University of Mannheim
 Master, National Taiwan University
 
 2007-2012, Bachelor, National Taiwan University
+
+---
 
 #### Professional Experience
 
