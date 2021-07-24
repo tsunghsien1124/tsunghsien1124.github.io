@@ -10,7 +10,6 @@ permalink: /Computation/
 {% assign posts = site.posts %}
 {% endif %}
 
-
 {%- if posts.size > 0 -%}
 {%- if page.list_title -%}
   <h2 class="post-list-heading">{{ page.list_title }}</h2>
