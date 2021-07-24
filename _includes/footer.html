@@ -8,16 +8,16 @@
       {%- if site.author %}
         <ul class="contact-list">
           {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
+            <li class="p-name"> {{ site.author.name | escape }} </li>
           {% endif -%}
           {% if site.author.email -%}
-            <li> Email: <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+            <li> Email: <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> </li>
           {%- endif %}
           {% if site.author.phone -%}
-            <li> Phone: {{ site.author.phone }}</li>
+            <li> Phone: {{ site.author.phone }} </li>
           {%- endif %}
           {% if site.author.address -%}
-            <li> Address: {{ site.author.address }}</li>
+            <li> Address: {{ site.author.address }} </li>
           {%- endif %}
         </ul>
       {%- endif %}
