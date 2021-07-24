@@ -4,14 +4,6 @@ title: Computation
 permalink: /Computation/
 ---
 
-#### How to solve default model?
-
----
-
-#### When Taste Shocks Meet HA Framework
-
-{{ content }}
-
 {% if site.paginate %}
 {% assign posts = paginator.posts %}
 {% else %}
