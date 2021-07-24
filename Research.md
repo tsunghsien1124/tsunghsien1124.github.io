@@ -6,8 +6,10 @@ permalink: /Research/
 
 #### Job market paper
 
-Are Payday Loan Users Irrational? A Credit-Scoring Approach
+Are Payday Loan Users Irrational? A Credit-Scoring Approach (with Jan Sun)
 
 ---
 
 #### Work in progress
+
+Consumer Bankruptcy: the Role of Financial Frictions
