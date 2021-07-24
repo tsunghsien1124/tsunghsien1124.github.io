@@ -20,4 +20,4 @@ Master, National Taiwan University, Taiwan
 
 #### Professional Experience
 
-2015 - 2017 Economic and Finance Specialist, Central Bank of R.O.C. (Taiwan)
+2015 - 2017 Economic and Financial Analysis Specialist, Central Bank of Taiwan
