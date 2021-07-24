@@ -19,9 +19,7 @@ permalink: /Computation/
   	{%- for post in posts -%}
   		<li>
 			<span class="post-meta">{{ post.date | date: date_format }}</span>
-			<h6>
-	  			<a class="post-link" href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>
-			</h6>
+	  		<a class="post-link" href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>
 			{%- if site.show_excerpts -%}
 	  			{{ post.excerpt }}
 			{%- endif -%}
