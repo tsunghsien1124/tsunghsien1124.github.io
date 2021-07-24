@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: CV
 permalink: /CV/
 ---
@@ -11,8 +11,6 @@ Download my detailed CV here!
 #### Education
 
 Sep. 2017 - Present, Ph.D., University of Mannheim, Germany
-
-Master, National Taiwan University, Taiwan
 
 June 2015,  National Taiwan University, Taiwan
 
