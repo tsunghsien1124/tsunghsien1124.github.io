@@ -5,8 +5,8 @@ author:
   phone: +49 621 181 1871
   address: L7, 3-5, 68161 Mannheim, Germany
 description: > # this means to ignore newlines until "show_excerpts:"
-  Macroeconomics, Consumer Finance adn Default, and Computational Economics.
-show_excerpts: false # set to true to show excerpts on the homepage
+  Macroeconomics, Consumer Finance adn Default, and Computational Economics
+show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
