@@ -4,8 +4,8 @@ title : Discretization of AR(1) Process Using Adda and Copper (2003)
 permalink: /Computation/:title/
 ---
 
-Discretization plays a necessary role.
-There are multiple widely used approaches, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**[^1] (hereafter, AC2003).
+Discretization plays am essential role in confronting problems with continuous exogenous processes (e.g., income
+There are multiple approaches that are widely used, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**[^1] (hereafter, AC2003).
 `QuantEcon.jl` contains the former two; yet, I cannot find a decent implementation for the last one in `Julia`.
 Hence, this blog aims to fill this void.
 In the following, I will firstly explain how AC2003 works and then show how it can be coded in `Julia`.
