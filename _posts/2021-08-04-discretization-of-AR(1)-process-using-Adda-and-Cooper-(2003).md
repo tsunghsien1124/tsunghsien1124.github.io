@@ -13,7 +13,7 @@ In the following, I will firstly explain how AC2003 works and then show how it c
 
 #### How AC(2003) Works
 
-This section will mostly follow the original treatment in their book, albeit slightly contaminated with my preference and interpretation.
+This section will mostly follow the original treatment in their book (Page 56 - 59), albeit slightly contaminated with my preference and interpretation.
 Suppose that we have the following AR(1) process of $\epsilon$.
 
 \\[ \begin{equation} \epsilon_t = \mu (1-\rho) + \rho \epsilon_{t-1} + u_t, \end{equation} \\]
@@ -58,11 +58,6 @@ function adda_cooper_2003(N::Integer, ρ::Real, σ::Real; μ::Real = 0.0)
     return z, Π
 end
 ```
-
-```
-adda_cooper_2003 (generic function with 1 method)
-```
-
 
 
 
