@@ -5,7 +5,7 @@ permalink: "/Computation/:title/"
 ---
 
 
-Discretization plays a necessary role in computation. There are a number of common approaches, including Tauchen, Rouwenhorst, and *Adda and Cooper (2003)*.
+Discretization plays a necessary role in computation. There are a number of common approaches, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**.
 
 #### How It Works
 
