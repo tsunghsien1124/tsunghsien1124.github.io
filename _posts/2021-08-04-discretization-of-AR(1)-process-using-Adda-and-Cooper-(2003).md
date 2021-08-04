@@ -5,7 +5,9 @@ permalink: "/Computation/:title/"
 ---
 
 
-#### Test Weave.jl
+Discretization plays a necessary role in computation. There are a number of common approaches, including Tauchen, Rouwenhorst, and *Adda and Cooper (2003)*.
+
+#### How It Works
 
 Still not sure if the page can be generated using a given layout.
 
