@@ -60,4 +60,4 @@ plugins:
 
 google_analytics: G-C1ZMLQK8ZM
 
-permalink: /:title/
+permalink: /:path/:title/
