@@ -5,15 +5,16 @@ permalink: /Computation/:title/
 ---
 
 Discretization plays a necessary role.
-There are a number of common approaches, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**[^1].
-Package `QuantEcon` in `Julia` contains the former two; yet, I cannot find a thorough illustration for the last one.
+There are multiple widely used approaches, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**[^1] (hereafter, AC2003).
+Package `QuantEcon` in `Julia` contains the former two; yet, I cannot find a decent implementation for the last one in `Julia`.
+Hence, this blog aims to fill this void.
+In the following, I will firstly explain how AC2003 works and then show how it can be implemented in `Julia`.
 
-
-#### How It Works
+#### How AC(2003) Works
 
 Still not sure if the page can be generated using a given layout.
 
-#### Test Math Display
+#### Implementation in `Julia`
 
 Define a function $f(x) = x^2$ as follows.
 
