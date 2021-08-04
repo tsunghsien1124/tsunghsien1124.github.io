@@ -23,6 +23,8 @@ f (generic function with 1 method)
 
 Such function evaluated at 2 is given by $f(2) = 4$.
 
+\[\log(2) + 5y = \int_0^\infty \frac{1}{z} \, dz\]
+
 # Test Plot.jl
 
 Load Plots.jl
