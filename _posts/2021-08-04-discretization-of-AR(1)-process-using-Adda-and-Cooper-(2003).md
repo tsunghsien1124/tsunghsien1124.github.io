@@ -5,7 +5,7 @@ permalink: "/Computation/:title/"
 ---
 
 
-Discretization plays am essential role in confronting problems with continuous exogenous processes (e.g., income
+Discretization plays an essential role in confronting problems with continuous exogenous processes (e.g., income).
 There are multiple approaches that are widely used, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**[^1] (hereafter, AC2003).
 `QuantEcon.jl` contains the former two; yet, I cannot find a decent implementation for the last one in `Julia`.
 Hence, this blog aims to fill this void.
@@ -34,7 +34,7 @@ using QuadGK
 
 
 
-In particular, I use `Distributions.jl` to evaluation pdf or cdf for a given distribution and 'QuadGK.jl', one-dimensional integral.
+In particular, I use `Distributions.jl` to evaluation pdf or cdf for a given distribution and `QuadGK.jl`, one-dimensional integral.
 
 ```julia
 function adda_cooper_2003(N::Integer, ρ::Real, σ::Real; μ::Real = 0.0)
