@@ -45,4 +45,4 @@ y = rand(N)
 plot(x, y)
 ```
 
-![](/assets/figures/2021-08-04-discretization-of-AR(1)-process-using-Adda-and-Cooper-(2003)_3_1.png)
+![](/assets/figures/2021-08-04-discretization-of-AR(1)-process-using-Adda-and-Cooper-(2003)_3_1.pdf)
