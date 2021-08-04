@@ -23,7 +23,7 @@ f (generic function with 1 method)
 
 Such function evaluated at 2 is given by $f(2) = 4$.
 
-\[\log(2) + 5y = \int_0^\infty \frac{1}{z} \, dz\]
+\\[\log(2) + 5y = \int_0^\infty \frac{1}{z} \, dz\\]
 
 # Test Plot.jl
 
@@ -45,4 +45,4 @@ y = rand(N)
 plot(x, y)
 ```
 
-![](C:/Users/Tsung-Hsien Li/Documents/GitHub/tsunghsien1124.github.io/assets/figures/2021-08-04-discretization-of-AR(1)-process-using-Adda-and-Cooper-(2003)_3_1.png)
+![](/assets/figures/2021-08-04-discretization-of-AR(1)-process-using-Adda-and-Cooper-(2003)_3_1.png)

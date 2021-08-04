@@ -11,15 +11,16 @@ println(readdir(file_path))
 # where to store results
 markdown_path = current_path * "\\_posts"
 figure_path = current_path * "\\assets\\figures"
-file_name = file_path * "2021-08-04-discretization-of-AR(1)-process-using-Adda-and-Cooper-(2003).Jmd"
+file_name = "2021-08-04-discretization-of-AR(1)-process-using-Adda-and-Cooper-(2003)"
+file_Jmd = file_path * file_name * ".Jmd"
 
 # start to weave Jmd to md and output them to the specified folders
-weave(file_name, doctype = "github", out_path = markdown_path, fig_path = figure_path)
+weave(file_Jmd, doctype = "github", out_path = markdown_path, fig_path = figure_path)
 
-filenames = ["f1.txt", "f2.txt"]
-for filename in filenames
-   txt = read(filename, String)
-   open(filename, "w") do f
-      write(f, replace(txt, "Goodbye London!" => "Hello New York!"))
-   end
+# modify the figure path
+markdown_file_path = markdown_path * "\\" * file_name * ".md"
+figure_path_adjusted = replace(figure_path, "\\" => "/")
+txt = read(markdown_file_path, String)
+open(markdown_file_path, "w") do f
+   write(f, replace(txt, figure_path_adjusted => "/assets/figures"))
 end
