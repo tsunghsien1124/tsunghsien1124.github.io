@@ -13,6 +13,7 @@ In the following, I will firstly explain how AC2003 works and then show how it c
 
 #### How AC(2003) Works
 
+The following will stick mostly to the original treatment in their book, albeit slightly contaminated with my preference and interpretation. 
 Suppose that we have the following AR(1) process.
 
 \\[ \begin{equation} \epsilon_t = \mu (1-\rho) + \rho \epsilon_{t-1} + u_t, \end{equation} \\]
