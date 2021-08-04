@@ -47,4 +47,4 @@ y = rand(N)
 plot(x, y)
 ```
 
-![](/_drafts/figures/3_1.png)
+![](/_posts/figures/3_1.png)
