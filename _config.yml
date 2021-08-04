@@ -59,5 +59,3 @@ plugins:
  - jekyll-seo-tag
 
 google_analytics: G-C1ZMLQK8ZM
-
-permalink: /:categories/:title/

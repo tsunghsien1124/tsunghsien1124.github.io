@@ -1,9 +1,10 @@
 ---
 layout: post
 title : Discretization of AR(1) Process Using Adda and Copper (2003)
+permalink: /Computation/:title/
 ---
 
-# Test Weave,jl
+# Test Weave.jl
 
 Still not sure if the page can be generated using a given layout.
 
@@ -11,7 +12,7 @@ Still not sure if the page can be generated using a given layout.
 
 Define a function $f(x) = x^2$ as follows.
 
-```julia
+```julia, echo = false
 f(x) = x^2
 ```
 
