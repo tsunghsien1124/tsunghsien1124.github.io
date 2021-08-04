@@ -5,7 +5,7 @@ permalink: "/Computation/:title/"
 ---
 
 
-Discretization plays an essential role in confronting problems with continuous exogenous processes (e.g., income).
+Discretization plays an essential role in confronting problems with continuous exogenous processes (e.g., income and productivity).
 There are multiple approaches that are widely used, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**[^1] (hereafter, AC2003).
 `QuantEcon.jl` contains the former two; yet, I cannot find a decent implementation for the last one in `Julia`.
 Hence, this blog aims to fill this void.
