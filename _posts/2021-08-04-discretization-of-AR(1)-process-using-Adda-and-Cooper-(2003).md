@@ -22,7 +22,48 @@ where $\mu$ denotes unconditional mean, $\rho$ AR(1) coefficient, $u_t$ normally
 
 #### How to Program AC2003 in `Julia`
 
-Define a function $f(x) = x^2$ as follows.
+```julia
+    function adda_cooper_2003(N::Integer, ρ::Real, σ::Real; μ::Real = 0.0)
+        """
+        Discretization of AR(1) process proposed by Adda and Cooper (2003)
+
+        Inputs:
+            - N: number of states
+            - ρ: AR(1) coefficient
+            - σ: s.d. of innovation
+            - μ: unconditional mean (default value is set to zero)
+
+        Author: Tsung-Hsien Li
+        Email: tsung-hsien.li@gess.uni-mannheim.de
+        """
+
+        σ_ϵ = σ / sqrt(1.0 - ρ^2)
+        ϵ = σ_ϵ .* quantile.(Normal(), [i/N for i = 0:N]) .+ μ
+        z = zeros(N)
+        for i = 1:N
+            if i != (N+1)/2
+                z[i] = N * σ_ϵ * (pdf(Normal(), (ϵ[i]-μ)/σ_ϵ) - pdf(Normal(), (ϵ[i+1]-μ)/σ_ϵ)) + μ
+            end
+        end
+        Π = zeros(N,N)
+        if ρ == 0.0
+            Π .= 1/N
+        else
+            for i = 1:N, j = 1:N
+                f(u) = exp(-(u-μ)^2/(2*σ_ϵ^2)) * (cdf(Normal(), (ϵ[j+1]-μ*(1.0-ρ)-ρ*u)/σ) - cdf(Normal(), (ϵ[j]-μ*(1.0-ρ)-ρ*u)/σ))
+                integral, err = quadgk(u -> f(u), ϵ[i], ϵ[i+1])
+                Π[i,j] = (N/sqrt(2*π*σ_ϵ^2)) * integral
+            end
+        end
+        return z, Π
+    end
+```
+
+```
+adda_cooper_2003 (generic function with 1 method)
+```
+
+
 
 
 
@@ -51,7 +92,7 @@ y = rand(N)
 plot(x, y)
 ```
 
-![](/assets/figures/2021-08-04-discretization-of-AR(1)-process-using-Adda-and-Cooper-(2003)_3_1.png)
+![](/assets/figures/2021-08-04-discretization-of-AR(1)-process-using-Adda-and-Cooper-(2003)_4_1.png)
 
 
 
