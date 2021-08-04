@@ -6,7 +6,7 @@ permalink: "/Computation/:title/"
 
 
 Discretization plays a necessary role.
-There are a number of common approaches, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**.
+There are a number of common approaches, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**[^1].
 Package `QuantEcon` in `Julia` contains the former two; yet, I cannot find a thorough illustration for the last one.
 
 
@@ -46,3 +46,7 @@ plot(x, y)
 ```
 
 ![](/assets/figures/2021-08-04-discretization-of-AR(1)-process-using-Adda-and-Cooper-(2003)_3_1.png)
+
+
+
+[^1]: Adda, J. and R. W. Cooper (2003), *"Dynamic Economics: Quantitative Methods and Applications"*, MIT Press.
