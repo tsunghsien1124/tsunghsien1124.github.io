@@ -2,8 +2,6 @@
 layout: post
 title : Discretization of AR(1) Process Using Adda and Copper (2003)
 author : Tsung-Hsien Li
-weave_options:
-  doctype: github
 ---
 
 # Test Weave,jl
