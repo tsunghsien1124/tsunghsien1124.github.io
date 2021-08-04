@@ -17,45 +17,45 @@ Suppose that we have the following AR(1) process of $\epsilon$.
 
 \\[ \begin{equation} \epsilon_t = \mu (1-\rho) + \rho \epsilon_{t-1} + u_t, \end{equation} \\]
 
-where $\mu$ denotes unconditional mean, $\rho$ AR(1) coefficient, $u_t$ normally distributed innovation with mean zero and variance $\sigam^2$.
+where $\mu$, $\rho$, and $u_t$ denote unconditional mean, AR(1) coefficient, as well as normally distributed innovation with mean zero and variance $\sigma^2$, respectively.
 
 #### How to Program AC2003 in `Julia`
 
 ```julia
-    function adda_cooper_2003(N::Integer, ρ::Real, σ::Real; μ::Real = 0.0)
-        """
-        Discretization of AR(1) process proposed by Adda and Cooper (2003)
+function adda_cooper_2003(N::Integer, ρ::Real, σ::Real; μ::Real = 0.0)
+    """
+    Discretization of AR(1) process proposed by Adda and Cooper (2003)
 
-        Inputs:
-            - N: number of states
-            - ρ: AR(1) coefficient
-            - σ: s.d. of innovation
-            - μ: unconditional mean (default value is set to zero)
+    Inputs:
+        - N: number of states
+        - ρ: AR(1) coefficient
+        - σ: s.d. of innovation
+        - μ: unconditional mean (default value is set to zero)
 
-        Author: Tsung-Hsien Li
-        Email: tsung-hsien.li@gess.uni-mannheim.de
-        """
+    Author: Tsung-Hsien Li
+    Email: tsung-hsien.li@gess.uni-mannheim.de
+    """
 
-        σ_ϵ = σ / sqrt(1.0 - ρ^2)
-        ϵ = σ_ϵ .* quantile.(Normal(), [i/N for i = 0:N]) .+ μ
-        z = zeros(N)
-        for i = 1:N
-            if i != (N+1)/2
-                z[i] = N * σ_ϵ * (pdf(Normal(), (ϵ[i]-μ)/σ_ϵ) - pdf(Normal(), (ϵ[i+1]-μ)/σ_ϵ)) + μ
-            end
+    σ_ϵ = σ / sqrt(1.0 - ρ^2)
+    ϵ = σ_ϵ .* quantile.(Normal(), [i/N for i = 0:N]) .+ μ
+    z = zeros(N)
+    for i = 1:N
+        if i != (N+1)/2
+            z[i] = N * σ_ϵ * (pdf(Normal(), (ϵ[i]-μ)/σ_ϵ) - pdf(Normal(), (ϵ[i+1]-μ)/σ_ϵ)) + μ
         end
-        Π = zeros(N,N)
-        if ρ == 0.0
-            Π .= 1/N
-        else
-            for i = 1:N, j = 1:N
-                f(u) = exp(-(u-μ)^2/(2*σ_ϵ^2)) * (cdf(Normal(), (ϵ[j+1]-μ*(1.0-ρ)-ρ*u)/σ) - cdf(Normal(), (ϵ[j]-μ*(1.0-ρ)-ρ*u)/σ))
-                integral, err = quadgk(u -> f(u), ϵ[i], ϵ[i+1])
-                Π[i,j] = (N/sqrt(2*π*σ_ϵ^2)) * integral
-            end
-        end
-        return z, Π
     end
+    Π = zeros(N,N)
+    if ρ == 0.0
+        Π .= 1/N
+    else
+        for i = 1:N, j = 1:N
+            f(u) = exp(-(u-μ)^2/(2*σ_ϵ^2)) * (cdf(Normal(), (ϵ[j+1]-μ*(1.0-ρ)-ρ*u)/σ) - cdf(Normal(), (ϵ[j]-μ*(1.0-ρ)-ρ*u)/σ))
+            integral, err = quadgk(u -> f(u), ϵ[i], ϵ[i+1])
+            Π[i,j] = (N/sqrt(2*π*σ_ϵ^2)) * integral
+        end
+    end
+    return z, Π
+end
 ```
 
 ```julia, echo = false, results = "hidden"
