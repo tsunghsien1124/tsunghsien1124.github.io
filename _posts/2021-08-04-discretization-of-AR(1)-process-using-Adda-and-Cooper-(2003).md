@@ -9,11 +9,15 @@ Discretization plays a necessary role.
 There are multiple widely used approaches, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**[^1] (hereafter, AC2003).
 Package `QuantEcon` in `Julia` contains the former two; yet, I cannot find a decent implementation for the last one in `Julia`.
 Hence, this blog aims to fill this void.
-In the following, I will firstly explain how AC2003 works and then show how it can be implemented in `Julia`.
+In the following, I will firstly explain how AC2003 works and then show how it can be coded in `Julia`.
 
 #### How AC(2003) Works
 
-Still not sure if the page can be generated using a given layout.
+Suppose that we have the following AR(1) process.
+
+\\[ \begin{equation} \epsilon_t = \mu (1-\rho) + \rho \epsilon_{t-1} + u_t, \end{equation} \\]
+
+where
 
 #### Implementation in `Julia`
 
