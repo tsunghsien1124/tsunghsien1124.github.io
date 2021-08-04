@@ -20,9 +20,11 @@ Suppose that we have the following AR(1) process of $\epsilon$.
 
 where $\mu$, $\rho$, and $u_t$ denote unconditional mean, AR(1) coefficient, as well as normally distributed innovation with mean zero and variance $\sigma^2$, respectively.
 
+TBC
+
 #### How to Program AC2003 in `Julia`
 
-Let's import the necessary packages.
+Import the necessary packages.
 
 ```julia
 using Distributions
@@ -32,7 +34,7 @@ using QuadGK
 
 
 
-In particular, we use `Distributions.jl` to evaluation pdf or cdf for a given distribution (it's normal distribution in our case) and 'QuadGK.jl' integral.
+In particular, I use `Distributions.jl` to evaluation pdf or cdf for a given distribution and 'QuadGK.jl', one-dimensional integral.
 
 ```julia
 function adda_cooper_2003(N::Integer, ρ::Real, σ::Real; μ::Real = 0.0)
