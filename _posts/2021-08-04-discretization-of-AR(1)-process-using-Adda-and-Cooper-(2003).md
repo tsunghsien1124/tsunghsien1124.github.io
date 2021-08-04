@@ -13,11 +13,6 @@ Still not sure if the page can be generated using a given layout.
 
 Define a function $f(x) = x^2$ as follows.
 
-```
-f (generic function with 1 method)
-```
-
-
 
 
 
