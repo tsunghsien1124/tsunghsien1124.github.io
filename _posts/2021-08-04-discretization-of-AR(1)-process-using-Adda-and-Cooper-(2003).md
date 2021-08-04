@@ -5,11 +5,11 @@ permalink: "/Computation/:title/"
 ---
 
 
-### Test Weave.jl
+#### Test Weave.jl
 
 Still not sure if the page can be generated using a given layout.
 
-### Test Math Display
+#### Test Math Display
 
 Define a function $f(x) = x^2$ as follows.
 
@@ -20,7 +20,7 @@ Such function evaluated at 2 is given by $f(2) = 4$.
 
 \\[\log(2) + 5y = \int_0^\infty \frac{1}{z} \, dz\\]
 
-### Test Plot.jl
+#### Test Plot.jl
 
 Load Plots.jl
 
