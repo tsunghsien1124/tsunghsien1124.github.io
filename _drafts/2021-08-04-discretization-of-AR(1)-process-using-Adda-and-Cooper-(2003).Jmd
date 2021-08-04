@@ -6,7 +6,7 @@ permalink: /Computation/:title/
 
 Discretization plays a necessary role.
 There are multiple widely used approaches, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**[^1] (hereafter, AC2003).
-Package `QuantEcon` in `Julia` contains the former two; yet, I cannot find a decent implementation for the last one in `Julia`.
+`QuantEcon.jl` contains the former two; yet, I cannot find a decent implementation for the last one in `Julia`.
 Hence, this blog aims to fill this void.
 In the following, I will firstly explain how AC2003 works and then show how it can be coded in `Julia`.
 
@@ -20,6 +20,15 @@ Suppose that we have the following AR(1) process of $\epsilon$.
 where $\mu$, $\rho$, and $u_t$ denote unconditional mean, AR(1) coefficient, as well as normally distributed innovation with mean zero and variance $\sigma^2$, respectively.
 
 #### How to Program AC2003 in `Julia`
+
+Let's import the necessary packages.
+
+```julia
+using Distributions
+using QuadGK
+```
+
+In particular, we use `Distributions.jl` to evaluation pdf or cdf for a given distribution (it's normal distribution in our case) and 'QuadGK.jl' integral.
 
 ```julia, results = "hidden"
 function adda_cooper_2003(N::Integer, ρ::Real, σ::Real; μ::Real = 0.0)
@@ -56,31 +65,6 @@ function adda_cooper_2003(N::Integer, ρ::Real, σ::Real; μ::Real = 0.0)
     end
     return z, Π
 end
-```
-
-```julia, echo = false, results = "hidden"
-f(x) = x^2
-```
-
-Such function evaluated at 2 is given by $f(2) = `j f(2)`$.
-
-\\[\log(2) + 5y = \int_0^\infty \frac{1}{z} \, dz\\]
-
-#### Test Plot.jl
-
-Load Plots.jl
-
-```julia
-using Plots
-```
-
-Plot a figure with randomly generated data.
-
-```julia
-N = 100
-x = rand(N)
-y = rand(N)
-plot(x, y)
 ```
 
 [^1]: Adda, J. and R. W. Cooper (2003), *"Dynamic Economics: Quantitative Methods and Applications"*, MIT Press.
