@@ -5,7 +5,10 @@ permalink: "/Computation/:title/"
 ---
 
 
-Discretization plays a necessary role in computation. There are a number of common approaches, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**.
+Discretization plays a necessary role.
+There are a number of common approaches, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**.
+Package `QuantEcon` in `Julia` contains the former two; yet, I cannot find a thorough illustration for the last one.
+
 
 #### How It Works
 
