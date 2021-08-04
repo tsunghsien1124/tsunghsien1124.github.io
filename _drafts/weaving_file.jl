@@ -10,8 +10,8 @@ println(pwd())
 println(readdir())
 
 # where to store results
-markdown_path = old_path * "\\assets\\figures"
-figure_path = old_path * "\\_posts"
+markdown_path = old_path * "\\_posts"
+figure_path = old_path * "\\assets\\figures"
 file_name = "2021-08-04-discretization-of-AR(1)-process-using-Adda-and-Cooper-(2003).Jmd"
 
 # start to weave Jmd to md and output them to the specified folders
