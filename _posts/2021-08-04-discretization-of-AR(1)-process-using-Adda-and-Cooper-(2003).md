@@ -47,4 +47,4 @@ y = rand(N)
 plot(x, y)
 ```
 
-![](/_drafts/figures/2021-08-04-discretization-of-AR(1)-process-using-Adda-and-Cooper-(2003)_3_1.png)
+![](/_drafts/figures/3_1.png)
