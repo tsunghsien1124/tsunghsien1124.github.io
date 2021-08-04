@@ -19,7 +19,7 @@ Suppose that we have the following AR(1) process.
 
 where
 
-#### Implementation in `Julia`
+#### How to Program AC2003 in `Julia`
 
 Define a function $f(x) = x^2$ as follows.
 
