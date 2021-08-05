@@ -11,6 +11,8 @@ There are multiple approaches that are widely used, including Tauchen, Rouwenhor
 Hence, this blog aims to fill this void.
 In the following, I will firstly explain how AC2003 works and then show how it can be coded in `Julia`.
 
+---
+
 #### How AC(2003) Works
 
 This section will mostly follow the original treatment in their book (Page 56 - 59), albeit slightly contaminated with my preference and interpretation.
@@ -21,6 +23,8 @@ Suppose that we have the following AR(1) process of $\epsilon$.
 where $\mu$, $\rho$, and $u_t$ denote unconditional mean, AR(1) coefficient, as well as normally distributed innovation with mean zero and variance $\sigma^2$, respectively.
 
 TBC
+
+---
 
 #### How to Program AC2003 in `Julia`
 
@@ -75,5 +79,7 @@ end
 
 
 
+
+---
 
 [^1]: Adda, J. and R. W. Cooper (2003), *"Dynamic Economics: Quantitative Methods and Applications"*, MIT Press.
