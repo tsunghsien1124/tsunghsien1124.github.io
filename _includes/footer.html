@@ -17,9 +17,7 @@
           {% if site.author.address -%}
             <li> Address: {{ site.author.address }} </li>
           {%- endif %}
-          {%- if social.github -%}
             <li> Other: <a href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}" target="_blank">GitHub</a> </li>
-          {%- endif -%}
         </ul>
       {%- endif %}
         <!--
@@ -30,7 +28,7 @@
       </div>
       <div class="footer-col">
         <!-- <p>{{ site.description | escape }}</p> -->
-        <img src="/assets/images/2560px-University_of_Mannheim.svg.png" alt="logo of university of Mannheim" style="width: 60%" align="middle">
+        <img src="/assets/images/2560px-University_of_Mannheim.svg.png" alt="logo of university of Mannheim" style="width: 60%" align="top|middle">
       </div>
     </div>
 
