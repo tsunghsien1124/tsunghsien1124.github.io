@@ -17,7 +17,7 @@
           {% if site.author.address -%}
             <li> Address: {{ site.author.address }} </li>
           {%- endif %}
-            <li> Other: <a href="https://github.com/{{ site.social.github | cgi_escape | escape }}" target="_blank">GitHub</a> </li>
+            <li> Other: <a href="https://github.com/{{ site.social_links.github | cgi_escape | escape }}" target="_blank">GitHub</a> </li>
         </ul>
       {%- endif %}
         <!--
