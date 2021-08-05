@@ -384,11 +384,21 @@
  }
 
  .left {
-   width: 60%;
+   width: calc(100% - (#{$spacing-unit} / 2));
  }
 
  .right {
-   width: 40%;
+   width: calc(100% - (#{$spacing-unit} / 2));
+ }
+
+ @media screen and (min-width: $on-large) {
+   .left {
+     width: calc(60% - (#{$spacing-unit} / 2));
+   }
+
+   .right {
+     width: calc(40% - (#{$spacing-unit} / 2));
+   }
  }
 
  /* Clear floats after the columns */
