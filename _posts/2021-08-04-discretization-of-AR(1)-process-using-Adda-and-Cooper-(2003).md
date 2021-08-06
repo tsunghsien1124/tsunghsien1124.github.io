@@ -6,16 +6,16 @@ permalink: "/Computation/:title/"
 
 
 Discretization plays an essential role in confronting problems with continuous exogenous processes (e.g., income and productivity).
-There are multiple approaches that are widely used, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**[^1] (hereafter, AC2003).
+There are multiple approaches that are widely used, including Tauchen, Rouwenhorst, and **Adda and Cooper (2003)**.[^1]
 `QuantEcon.jl` contains the former two; yet, I cannot find a decent implementation for the last one in `Julia`.
 Hence, this blog aims to fill this void.
-In the following, I will firstly explain how AC2003 works and then show how it can be coded in `Julia`.
+In the following, I will firstly explain how AC2003 works and then show how I coded it in `Julia`.
 
 ---
 
-#### How AC(2003) Works
+#### How Adda and Cooper (2003) Works
 
-This section will mostly follow the original treatment in their book (Page 56 - 59), albeit slightly contaminated with my preference and interpretation.
+This section will mostly follow the original treatment in their book (Page 56-59), albeit slightly contaminated with my preference and interpretation.
 Suppose that we have the following AR(1) process of $\epsilon$.
 
 \\[ \begin{equation} \epsilon_t = \mu (1-\rho) + \rho \epsilon_{t-1} + u_t, \end{equation} \\]
@@ -26,7 +26,7 @@ TBC
 
 ---
 
-#### How to Program AC2003 in `Julia`
+#### How to Program Adda and Cooper (2003) in `Julia`
 
 Import the necessary packages.
 
@@ -76,6 +76,38 @@ function adda_cooper_2003(N::Integer, ρ::Real, σ::Real; μ::Real = 0.0)
     return z, Π
 end
 ```
+
+
+
+
+Example: $N=3$, $\rho=0.5$, $\mu=0.0$, and $\sigma=1.0$.
+
+Let's first execute the function with these given parameter values.
+
+```julia
+z, Π = adda_cooper_2003(3, 0.5, 1.0)
+```
+
+```
+([-1.259546566716492, 0.0, 1.2595465667164922], [0.5485962092382011 0.31121
+53550998774 0.14018843566192132; 0.3112153550998773 0.3775692898002452 0.31
+121535509987736; 0.1401884356619213 0.31121535509987747 0.5485962092382013]
+)
+```
+
+
+
+
+
+The vector of states is given by:
+
+```
+3-element Vector{Float64}:
+ -1.259546566716492
+  0.0
+  1.2595465667164922
+```
+
 
 
 
