@@ -64,4 +64,4 @@ header_pages:
   - CV.html
   - Research.html
   - References.html
-  - Computation.html
+  # - Computation.html
