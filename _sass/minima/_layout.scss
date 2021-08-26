@@ -392,11 +392,11 @@
 
  @media screen and (min-width: $on-large) {
    .left {
-     width: calc(60% - (#{$spacing-unit} / 2));
+     width: calc(65% - (#{$spacing-unit} / 2));
    }
 
    .right {
-     width: calc(40% - (#{$spacing-unit} / 2));
+     width: calc(35% - (#{$spacing-unit} / 2));
    }
  }
 
