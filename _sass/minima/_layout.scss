@@ -418,3 +418,9 @@
 .ref-column {
   flex: 33.33%;
 }
+
+@media screen and (min-width: $on-large) {
+  .ref-column {
+    width: calc(100% - (#{$spacing-unit} / 2));
+  }
+}
