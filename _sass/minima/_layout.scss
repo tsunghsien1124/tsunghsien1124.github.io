@@ -408,13 +408,13 @@
  }
 
 /* */
-.columns {
+.ref-columns {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 }
 
-.column {
+.ref-column {
   flex: 33.33%;
 }
