@@ -415,18 +415,26 @@
   width: 100%;
 }
 
-.ref-column {
+.ref-column-1 {
+  flex: 33.33%;
+}
+
+.ref-column-2 {
+  flex: 33.33%;
+}
+
+.ref-column-3 {
   flex: 33.33%;
 }
 
 @media screen and (min-width: $on-large) {
-  .ref-column {
+  .ref-column-1 {
     width: calc(100% - (#{$spacing-unit} / 2));
   }
-  .ref-column {
+  .ref-column-2 {
     width: calc(100% - (#{$spacing-unit} / 2));
   }
-  .ref-column {
+  .ref-column-3 {
     width: calc(100% - (#{$spacing-unit} / 2));
-  }  
+  }
 }
