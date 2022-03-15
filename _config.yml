@@ -62,6 +62,6 @@ google_analytics: G-C1ZMLQK8ZM
 
 header_pages:
   # - CV.html
-  # - Research.html
+  - Research.html
   # - References.html
   # - Computation.html
