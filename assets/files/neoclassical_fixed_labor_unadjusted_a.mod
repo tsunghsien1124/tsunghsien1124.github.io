@@ -31,4 +31,4 @@ shocks;
 var e = eta^2;
 end;
 
-stoch_simul(order=1,nograph,noprint);
+stoch_simul(order=2,nograph,noprint);
