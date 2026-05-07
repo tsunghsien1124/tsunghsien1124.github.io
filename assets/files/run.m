@@ -10,7 +10,7 @@ number_eta = length(vector_eta);
 welfare_results = zeros(5,number_eta);
 
 % indicator of adjusted a
-ind_unadjusted_a = false;
+ind_unadjusted_a = true;
 
 for eta_i = 1:number_eta
     
@@ -20,22 +20,16 @@ for eta_i = 1:number_eta
 
     % run
     if ind_unadjusted_a == true
-        dynare neoclassical_fixed_labor_unadjusted_a.mod noclearall nolog
-
-        % shock index stored in Dynare results 
-        a_index = strmatch('A',M_.endo_names,'exact');
-
-        % retrieve mean of shock
-        welfare_results(2,eta_i) = oo_.mean(a_index);
+        dynare ex_unadjusted.mod noclearall nolog
     else
-        dynare neoclassical_fixed_labor.mod noclearall nolog
-
-        % shock index stored in Dynare results 
-        a_index = strmatch('a',M_.endo_names,'exact');
-
-        % retrieve mean of shock
-        welfare_results(2,eta_i) = oo_.mean(a_index);
+        dynare ex_adjusted.mod noclearall nolog
     end
+
+    % shock index stored in Dynare results 
+    a_index = strmatch('A',M_.endo_names,'exact');
+
+    % retrieve mean of shock
+    welfare_results(2,eta_i) = oo_.mean(a_index);
 
     % welfare index stored in Dynare results 
     welfare_index = strmatch('V',M_.endo_names,'exact');
@@ -58,7 +52,7 @@ for eta_i = 1:number_eta
 end
 
 % show results
-rowNames = {'eta','E(A)','V_ss','E(V)','E_ss(V)'};
-colNames = {'1','2','3','4','5'};
-welfare_table = array2table(welfare_results,'RowNames',rowNames,'VariableNames',colNames);
+rowNames = {'E(A)','V_ss','E(V)','E_ss(V)'};
+colNames = "η = " + string(vector_eta);
+welfare_table = array2table(welfare_results(2:end, :),'RowNames',rowNames,'VariableNames',colNames);
 display(welfare_table);
